@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Bebas+Neue&family=Manrope:wght@400;600;800&family=Nunito&family=Quicksand:wght@300&family=Red+Hat+Mono&family=Roboto:wght@400;500&display=swap');
+
+.loginpage{
+    position: fixed;
+    background: #00000083;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+}
+
+.mainpart {
+    position: relative;
+    width: 70%;
+    margin: 0 auto;
+    height: auto;
+    margin-top: calc(100vh - 95vh - 20px);
+    background: rgb(255, 227, 203);
+    border-radius: 14px;
+    border: 1px solid #999;
+    overflow: auto;
+    display: flex;
+}
+
+
+.half-one, .half-two {
+    height: 90vh;
+    width: 50%;
+}
+
+.half-one {
+    background-image: url("E:/MERN/VCode/my_food_flipr/src/assets/onSignup.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.half-two{overflow: hidden;}
+
+.half-two .headUp{padding: 20px 20px 10px 70px;}
+.title {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Acme',sans-serif;
+    font-size: 54px;
+}
+.content { padding-right: 50px; padding-top: 10px;}
+
+#linebw {
+    display: flex;
+    flex-direction: row;
+}
+#linebw:before, #linebw:after{
+    content: "";
+    flex: 1 1;
+    border-bottom: 1px solid;
+    margin: auto;
+}
+#linebw:before {margin-right: 10px}
+#linebw:after {margin-left: 10px}
