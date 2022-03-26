@@ -16,5 +16,10 @@
     background-position: center;
     background-size: cover;
 }
-
+.bottomTxt {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
 /* Other CSS is same as Login Page */
