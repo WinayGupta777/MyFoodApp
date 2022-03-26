@@ -1,0 +1,41 @@
+
+.tcontainer{
+    height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    overflow: hidden;
+}
+
+.tmain{
+    margin-top: 100px;
+    background-color: rgba(0, 0, 0, 0.301);
+    height: 100%;
+    width: 50%;
+}
+
+.titleM, .subtitle, .tagline{
+    padding-right: 70px;
+    display: flex;
+    justify-content: right;
+}
+.titleM  p, .subtitle > p, .tagline > p{
+    color: white;
+    font-size: 100px;
+    font-family: "Yatra One";
+    text-align: right;
+}
+.titleM p {line-height: 120px;}
+.titleM p b {
+    color: rgb(136, 255, 0);
+}
+.subtitle {margin-left: 400px;}
+.tagline {margin-top: 16vh;}
+.subtitle p{font-size: 20px; font-family: 'Nunito';}
+.tagline p{font-size: 30px;}
+
+.buttons {
+    text-align: right;
+    margin: 40px 0;
+    padding-right: 70px;
+}
