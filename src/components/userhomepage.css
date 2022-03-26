@@ -1,0 +1,18 @@
+.oval-wrap{
+    filter: drop-shadow(-1px 6px 30px rgba(50, 50, 0, 0.5));
+}
+
+.oval {
+    box-shadow: 0 0 100px 50px black inset;
+    background-image: url("E:/MERN/VCode/my_food_flipr/src/assets/userHome1.jpg");
+    height: 60vh;
+    background-position: 10% 40%;
+    background-size: cover;
+    filter: brightness(100%);
+    clip-path: ellipse(70% 95% at 50% 5%);
+}
+
+.sectoru2 {
+    height: 100vh;
+    background-color: pink;
+}

@@ -11,7 +11,7 @@
     justify-content: right;
 }
 .lists {
-    width: 400px;
+    width: 500px;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -19,3 +19,10 @@
 
 .lists div {cursor: pointer;}
 .lists div:hover {color: #ffc400;}
+
+#profile {
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
