@@ -29,6 +29,7 @@
 }
 
 .half-one-signin {
+    box-shadow: 1px 0 15px 2px black;
     background-image: url("E:/MERN/VCode/my_food_flipr/src/assets/onSignup.jpg");
     background-position: center;
     background-size: cover;

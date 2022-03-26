@@ -1,11 +1,15 @@
 import "./loginpage.css"
 import { Close } from "@mui/icons-material";
-import { Button, Input, TextField } from "@mui/material";
+import { Button, TextField } from "@mui/material";
 import GoogleButton from "react-google-button";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
+
 const LoginPage=()=>{
     const [userEmail, setEmail] = useState('');
     const [userPasswd, setPasswd] = useState('');
+    const navigate = useNavigate();
 
     const onChangeHandler=(lbl, e)=>{
         if (lbl=="email") setEmail(e.target.value);
@@ -16,6 +20,10 @@ const LoginPage=()=>{
     const onSubmited=(e)=>{
         e.preventDefault();
         console.log("LoginPage: Submit pressed.");
+    }
+
+    const navigateToRegister=()=>{
+        navigate("/register");
     }
 
     return(
@@ -70,7 +78,7 @@ const LoginPage=()=>{
                             <div className="Googlebtn">
                                 <GoogleButton />
                                 <p>Don't have an account? 
-                                    <a href="#" id="fplink">Register</a>
+                                    <a  onClick={()=>navigateToRegister()} id="fplink">Register</a>
                                 </p>
                             </div>
                         </div>

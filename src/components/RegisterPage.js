@@ -2,12 +2,15 @@ import "./registerpage.css"
 import { Close } from "@mui/icons-material";
 import { Button,TextField, Checkbox, FormControlLabel } from "@mui/material";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
 
 const RegisterPage=()=>{
     const [userName, setUserName] = useState('');
     const [userEmail, setEmail] = useState('');
     const [userPasswd, setPasswd] = useState('');
     const [userCPasswd, setCPasswd] = useState('');
+    const navigate = useNavigate();
 
     const onChangeHandler=(lbl, e)=>{
         if (lbl=="name") setUserName(e.target.value);
@@ -22,6 +25,10 @@ const RegisterPage=()=>{
         if (userCPasswd == userPasswd){
             console.log("Password are matching");
         }
+    }
+
+    const navigateToLogin=()=>{
+        navigate("/login");
     }
     
 
@@ -89,7 +96,7 @@ const RegisterPage=()=>{
 
                             <div className="bottomTxt">
                                 <p>Already have an account? 
-                                    <a href="#" id="fplink">Sign in</a>
+                                    <a  onClick={()=>navigateToLogin()} id="fplink">Sign in</a>
                                 </p>
                             </div>
 
