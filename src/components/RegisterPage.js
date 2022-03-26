@@ -96,7 +96,7 @@ const RegisterPage=()=>{
                                 >Register</Button>
                             </form>
 
-                            <div className="bottomTxt">
+                            <div className="bottomTxtR">
                                 <p>Already have an account? 
                                     <a  onClick={()=>navigateToLogin()} id="fplink">Sign in</a>
                                 </p>
