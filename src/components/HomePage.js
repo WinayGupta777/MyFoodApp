@@ -9,10 +9,6 @@ const HomePage=()=>{
                 <NavBar />
                 <TitleTag />
             </div>
-            <div className="section2">
-            </div>
-            <div className="section3">
-            </div>
         </div>
     );
 }

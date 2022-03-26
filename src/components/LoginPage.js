@@ -25,9 +25,6 @@ const LoginPage=()=>{
     const navigateToRegister=()=>{
         navigate("/register");
     }
-    const navigateBack=()=>{
-        navigate(-1);
-    }
 
     return(
         <div className="loginpage">
@@ -40,7 +37,7 @@ const LoginPage=()=>{
                     <div className="headUp">
                         <div className="title">
                             <p>Sign In</p>
-                            <IconButton onClick={()=>navigate(-1)}>
+                            <IconButton onClick={()=>navigate("/")}>
                                 <CloseIcon sx={{ height: 50, width: 50}} />
                             </IconButton>
                         </div>

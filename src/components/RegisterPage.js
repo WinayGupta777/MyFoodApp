@@ -44,7 +44,7 @@ const RegisterPage=()=>{
 
                         <div className="title">
                             <p>Sign Up</p>
-                            <IconButton onClick={()=>navigate(-1)}>
+                            <IconButton onClick={()=>navigate("/")}>
                                 <CloseIcon sx={{ height: 50, width: 50}}/>
                             </IconButton>
                         </div>
