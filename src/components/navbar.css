@@ -1,0 +1,21 @@
+
+.NavBar {
+    font-size: 24px;
+    font-family: "Nunito";
+    height: 10vh;
+    padding: 0 100px;
+    color: aliceblue;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+.lists {
+    width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.lists div {cursor: pointer;}
+.lists div:hover {color: rgb(255, 196, 0);}

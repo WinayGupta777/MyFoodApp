@@ -1,0 +1,16 @@
+.homepage {
+    
+}
+
+.section1 {
+    box-shadow: 0 0 100px 50px black inset;
+    height: 100vh;
+    background-image: url("E:/MERN/VCode/my_food_flipr/src/assets/mainbg.jpg");
+    background-size: cover;
+}
+
+
+.section2 {
+    height: 100vh;
+    background-color: rgb(255, 252, 217);
+}
