@@ -6,10 +6,10 @@ const LoginPage=()=>{
     return(
         <div className="loginpage">
             <div className="mainpart">
-                {/* Half one caontains only bgimage */}
-                <div className="half-one"></div>
+                {/* Half one contains only bgimage */}
+                <div className="half-one-signin"></div>
 
-                {/* Half two caontains other part */}
+                {/* Half two contains other part */}
                 <div className="half-two">
                     <div className="headUp">
                         <div className="title">

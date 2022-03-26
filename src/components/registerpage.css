@@ -1,0 +1,20 @@
+.registerpage{
+    position: fixed;
+    background: #00000083;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+}
+
+.half-one-signup, .half-two {
+    height: 90vh;
+    width: 50%;
+}
+.half-one-signup {
+    background-image: url("E:/MERN/VCode/my_food_flipr/src/assets/onSignin1.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+/* Other CSS is same as Login Page */

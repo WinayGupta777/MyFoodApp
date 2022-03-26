@@ -23,12 +23,12 @@
 }
 
 
-.half-one, .half-two {
+.half-one-signin, .half-two {
     height: 90vh;
     width: 50%;
 }
 
-.half-one {
+.half-one-signin {
     background-image: url("E:/MERN/VCode/my_food_flipr/src/assets/onSignup.jpg");
     background-position: center;
     background-size: cover;
