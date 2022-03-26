@@ -1,6 +1,6 @@
 import "./loginpage.css"
-import { Close } from "@mui/icons-material";
-import { Button, TextField } from "@mui/material";
+import CloseIcon from '@mui/icons-material/Close';
+import { Button, IconButton, TextField } from "@mui/material";
 import GoogleButton from "react-google-button";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -25,6 +25,9 @@ const LoginPage=()=>{
     const navigateToRegister=()=>{
         navigate("/register");
     }
+    const navigateBack=()=>{
+        navigate(-1);
+    }
 
     return(
         <div className="loginpage">
@@ -37,7 +40,9 @@ const LoginPage=()=>{
                     <div className="headUp">
                         <div className="title">
                             <p>Sign In</p>
-                            <Close sx={{ height: 50, width: 50, cursor: 'pointer'}} />
+                            <IconButton onClick={()=>navigate(-1)}>
+                                <CloseIcon sx={{ height: 50, width: 50}} />
+                            </IconButton>
                         </div>
 
                         <div className="content">

@@ -1,6 +1,6 @@
 import "./registerpage.css"
-import { Close } from "@mui/icons-material";
-import { Button,TextField, Checkbox, FormControlLabel } from "@mui/material";
+import CloseIcon from '@mui/icons-material/Close';
+import { Button,IconButton, TextField, Checkbox, FormControlLabel } from "@mui/material";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -44,7 +44,9 @@ const RegisterPage=()=>{
 
                         <div className="title">
                             <p>Sign Up</p>
-                            <Close sx={{ height: 50, width: 50, cursor: 'pointer'}} />
+                            <IconButton onClick={()=>navigate(-1)}>
+                                <CloseIcon sx={{ height: 50, width: 50}}/>
+                            </IconButton>
                         </div>
 
                         <div className="content">
