@@ -21,15 +21,6 @@ const SearchBox=()=>{
     return(
         <div>
             <div className="cmdsugg">
-                {/* <input
-                    autoFocus
-                    autoComplete="off"
-                    type="text"
-                    id="in"
-                    name="cmd"
-                    value={value}
-                    onChange={(e)=>onChangeMethod(e)}
-                ></input> */}
                 <TextField 
                     variant="outlined"
                     placeholder="Search for restaurant or dish"
@@ -49,23 +40,7 @@ const SearchBox=()=>{
                         ),
                       }}
                 />
-                {/* <OutlinedInput
-                    id="in"
-                    sx={{
-                        borderColor: 'white',
-                        color: 'white', 
-                        width: '40vw',
-                    }}
-                    type='text'
-                    // onChange={handleChange('password')}
-                    startAdornment={
-                        <InputAdornment position="start">
-                            <IconButton>
-                                <Search sx={{color: 'white'}}/>
-                            </IconButton>
-                        </InputAdornment>
-                    }
-                /> */}
+     
                 {/* {filteredData.length != 0 ?
                     <div className='suggestionBox'>
                         {filteredData.map(

@@ -14,6 +14,16 @@
 }
 
 .sectoru2 {
+    margin-top: 20vh;
     height: 100vh;
-    background-color: pink;
+    background-color: white;
+}
+
+.headTitle {
+    font-size: 60px;
+    margin-left: 220px;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: left;
 }

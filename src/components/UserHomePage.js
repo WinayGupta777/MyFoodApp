@@ -2,6 +2,7 @@ import NavBar from "./NavBar";
 import SearchBox from "./SearchBox";
 import AppName from "./AppName";
 import "./userhomepage.css"
+import CollectionList from "./CollectionList";
 
 const UserHomePage=()=>{
     return(
@@ -13,7 +14,10 @@ const UserHomePage=()=>{
                     <SearchBox />
                 </div>
             </div>
-            <div className="sectoru2"></div>
+            <div className="sectoru2">
+                <div className="headTitle">Collections</div>
+                <CollectionList />
+            </div>
         </div>
     );
 }
