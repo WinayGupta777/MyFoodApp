@@ -15,7 +15,7 @@ const RegisterPage=()=>{
         else if (lbl=="pass") setPasswd(e.target.value);
         else if (lbl=="cpass") setCPasswd(e.target.value);
     }
-    console.log(userName + userEmail + userPasswd + userCPasswd);
+    // console.log(userName + userEmail + userPasswd + userCPasswd);
 
     const onSubmited=()=>{
         console.log(userCPasswd + userPasswd);
@@ -43,49 +43,48 @@ const RegisterPage=()=>{
                         <div className="content">
                             <p>Let's get you all set up so you can verify your personal account and begin setting up your profile.</p>
 
-                            <form>
-                            <TextField
-                                required
-                                type="text"
-                                label="Username"
-                                sx={{width: '100%', mt: 3, backgroundColor: 'white'}}
-                                onChange={(e)=>onChangeHandler("name",e)}
-                            />
+                            <form onSubmit={onSubmited}>
+                                <TextField
+                                    required
+                                    type="text"
+                                    label="Username"
+                                    sx={{width: '100%', mt: 3, backgroundColor: 'white'}}
+                                    onChange={(e)=>onChangeHandler("name",e)}
+                                />
 
-                            <TextField
-                                required
-                                type="email"
-                                label="Email"
-                                sx={{width: '100%', mt: 3, backgroundColor: 'white'}}
-                                onChange={(e)=>onChangeHandler("email",e)}
-                            />
+                                <TextField
+                                    required
+                                    type="email"
+                                    label="Email"
+                                    sx={{width: '100%', mt: 3, backgroundColor: 'white'}}
+                                    onChange={(e)=>onChangeHandler("email",e)}
+                                />
 
-                            <TextField
-                                required
-                                label="Password"
-                                type="password"
-                                sx={{width: '100%', mt: 3, backgroundColor: 'white'}}
-                                onChange={(e)=>onChangeHandler("pass",e)}
-                            />
+                                <TextField
+                                    required
+                                    label="Password"
+                                    type="password"
+                                    sx={{width: '100%', mt: 3, backgroundColor: 'white'}}
+                                    onChange={(e)=>onChangeHandler("pass",e)}
+                                />
 
-                            <TextField
-                                required
-                                label="Confirm Password"
-                                type="password"
-                                sx={{width: '100%', mt: 3,mb:1, backgroundColor: 'white'}}
-                                onChange={(e)=>onChangeHandler("cpass",e)}
-                            />
-                            
-                            <FormControlLabel control={<Checkbox defaultChecked size="small"/>} sx={{color: 'gray'}} label={label} />
-          
-                            <Button 
-                                onClick={()=>onSubmited()}
-                                type="submit"
-                                variant="contained" 
-                                size="large"
-                                disableElevation
-                                sx={{width: '100%', mt: 3}}
-                            >Register</Button>
+                                <TextField
+                                    required
+                                    label="Confirm Password"
+                                    type="password"
+                                    sx={{width: '100%', mt: 3,mb:1, backgroundColor: 'white'}}
+                                    onChange={(e)=>onChangeHandler("cpass",e)}
+                                />
+                                
+                                <FormControlLabel control={<Checkbox defaultChecked size="small"/>} sx={{color: 'gray'}} label={label} />
+            
+                                <Button
+                                    type="submit"
+                                    variant="contained" 
+                                    size="large"
+                                    disableElevation
+                                    sx={{width: '100%', mt: 3}}
+                                >Register</Button>
                             </form>
 
                             <div className="bottomTxt">
