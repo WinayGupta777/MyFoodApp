@@ -1,0 +1,18 @@
+.cmdsugg{
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#in {
+    font-size: 26px;
+    font-weight: bold;
+    font-family: Quicksand;
+    height: 21px;
+    width: 50vw;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+}

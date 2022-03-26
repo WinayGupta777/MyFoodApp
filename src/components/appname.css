@@ -1,0 +1,14 @@
+.outer-name {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.name {
+    text-shadow: 0 0 50px black;
+    font-size: 20vh;
+    line-height: 20vh;
+    font-family: "Yatra One";
+}
