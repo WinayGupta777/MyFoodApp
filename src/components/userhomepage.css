@@ -13,16 +13,27 @@
 
 }
 
-.sectoru2 {
-    margin-top: 20vh;
+.sectoru2, .sectoru3 {
+    margin-top: 15vh;
     height: 100vh;
     background-color: white;
 }
 
 .headTitle {
-    font-size: 60px;
+    font-size: 55px;
+    font-weight: 300;
     margin-left: 220px;
     height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.headSubTitle{
+    font-size: 25px;
+    font-weight: 300;
+    margin-left: 220px;
+    height: 2vh;
     display: flex;
     align-items: center;
     justify-content: left;
