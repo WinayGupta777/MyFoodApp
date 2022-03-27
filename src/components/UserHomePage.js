@@ -28,6 +28,27 @@ const UserHomePage=(props)=>{
                 <div className="headSubTitle"><p>Discover the best food & drinks just within <b>3 km</b></p></div>
                 <RestaurantCollectionList />
             </div>
+            <div className="sectoru4">
+                <div className="bottomHead">
+                    <div className="bottomLogo">Foody</div>
+                    <div className="bottomtag">"Good Food for Good Moments"</div>
+                    <div className="bottomlinks">
+                        <div id="rowlinks">
+                            <p>Who we are</p>
+                            <p>Privacy</p>
+                            <p>Terms</p>
+                            <p>Report Fraud</p>
+                            <p>Community</p>
+                            <p>Contact</p>
+                        </div>
+                        <p>
+                            By continuing past this page, you agree to our Terms of Service, Cookie Policy, Privacy Policy and Content Policies.<br />
+                            All right reserved.©
+                        </p>
+                        
+                    </div>
+                </div>
+            </div>
         </div>
     );
 }
