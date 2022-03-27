@@ -27,7 +27,7 @@ const LoginPage=(props)=>{
                 email:userEmail,
                 password:userPasswd
         }).then((r)=>{
-                props.func(r.data.status);
+                props.func(r.data.status, r.data.username);
                 setMsg(r.data.message);
                 console.log(r.data);
         })

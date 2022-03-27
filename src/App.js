@@ -8,9 +8,11 @@ import { useState } from 'react';
 
 function App() {
   const [status, setStatus] = useState(false);
+  const [GlobalUserName, setGlobalUserName] = useState('');
 
-  const changeStatus=(s)=>{
+  const changeStatus=(s,n)=>{
     setStatus(s);
+    setGlobalUserName(n);
     console.log("UserStatus chaged to: "+ s);
   }
 
@@ -18,9 +20,9 @@ function App() {
     <div className="App">
       <Router>
         <Routes>
-          <Route path="/" element={<HomePage status={status} />} />
-          <Route path="/userhome" element={<UserHomePage status={status} />} />
-          <Route path="/register" element={<RegisterPage func={changeStatus} status={status}/>} />
+          <Route path="/" element={<HomePage status={status} uname={GlobalUserName} />} />
+          <Route path="/userhome" element={<UserHomePage status={status} uname={GlobalUserName}/>} />
+          <Route path="/register" element={<RegisterPage func={changeStatus} status={status} />} />
           <Route path="/login" element={<LoginPage func={changeStatus} status={status}/>} />
         </Routes>
       </Router>

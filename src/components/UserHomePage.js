@@ -7,11 +7,12 @@ import { useState } from "react";
 
 const UserHomePage=(props)=>{
     const [status,setStatus] = useState(props.status);
+    const [uname, setUname] = useState(props.uname);
     return(
         <div className="userhome">
             <div className="oval-wrap">
                 <div className="oval">
-                    <NavBar status={status} />
+                    <NavBar status={status} uname={uname}/>
                     <AppName />
                     <SearchBox />
                 </div>
