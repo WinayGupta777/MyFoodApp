@@ -4,11 +4,14 @@ import { Button, IconButton, TextField } from "@mui/material";
 import GoogleButton from "react-google-button";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 
 const LoginPage=()=>{
     const [userEmail, setEmail] = useState('');
     const [userPasswd, setPasswd] = useState('');
+    const [msg, setMsg] = useState(null);
+    const [status, setStatus] = useState(false);
     const navigate = useNavigate();
 
     const onChangeHandler=(lbl, e)=>{
@@ -20,6 +23,19 @@ const LoginPage=()=>{
     const onSubmited=(e)=>{
         e.preventDefault();
         console.log("LoginPage: Submit pressed.");
+        axios.post("http://localhost:8080/signin",{
+                email:userEmail,
+                password:userPasswd
+        }).then((r)=>{
+                setStatus(r.data.status);
+                setMsg(r.data.message);
+                console.log(r.data);
+        })
+        .catch((e)=>{
+            console.log(e.message)
+            setMsg(e.message);
+            //putError();
+        });
     }
 
     const navigateToRegister=()=>{
