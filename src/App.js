@@ -11,6 +11,7 @@ function App() {
 
   const changeStatus=(s)=>{
     setStatus(s);
+    console.log("UserStatus chaged to: "+ s);
   }
 
   return (
@@ -18,9 +19,9 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<HomePage status={status} />} />
-          <Route path="/userhome" element={<UserHomePage />} />
-          <Route path="/register" element={<RegisterPage func={changeStatus} />} />
-          <Route path="/login" element={<LoginPage func={changeStatus} />} />
+          <Route path="/userhome" element={<UserHomePage status={status} />} />
+          <Route path="/register" element={<RegisterPage func={changeStatus} status={status}/>} />
+          <Route path="/login" element={<LoginPage func={changeStatus} status={status}/>} />
         </Routes>
       </Router>
     </div>

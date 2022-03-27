@@ -44,6 +44,12 @@ const LoginPage=(props)=>{
         return(<MsgBox msg={msg} />);
     }
 
+    const navigateAfterLogin=()=>{
+        setTimeout(() => {
+            navigate("/userhome");
+        }, 2000);
+    }
+
     const navigateToRegister=()=>{
         navigate("/register");
     }
@@ -107,7 +113,7 @@ const LoginPage=(props)=>{
                             </div>
                             
                             {msg ? putMsg() : null}
-
+                            {props.status ? navigateAfterLogin() : null}
                         </div>
                     </div>
                 </div>

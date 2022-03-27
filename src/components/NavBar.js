@@ -7,7 +7,7 @@ const NavBar=(props)=>{
     const [status, setStatus] = useState(props.status);
     const navigate = useNavigate();
 
-    //setStatus(props.status);
+    // setStatus(props.status);
 
     const navigateTo=(place)=>{
         if (place == "rest") navigate("/resota")

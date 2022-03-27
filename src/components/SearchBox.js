@@ -26,7 +26,7 @@ const SearchBox=()=>{
                     placeholder="Search for restaurant or dish"
                     type="text"
                     id="in"
-                    autoFocus="true"
+                    autoFocus
                     onChange={(e)=>onChangeMethod(e)}
                     sx={{
                         backgroundColor: 'white',

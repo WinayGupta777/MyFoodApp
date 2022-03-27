@@ -3,13 +3,15 @@ import SearchBox from "./SearchBox";
 import AppName from "./AppName";
 import "./userhomepage.css"
 import CollectionList from "./CollectionList";
+import { useState } from "react";
 
-const UserHomePage=()=>{
+const UserHomePage=(props)=>{
+    const [status,setStatus] = useState(props.status);
     return(
         <div className="userhome">
             <div className="oval-wrap">
                 <div className="oval">
-                    <NavBar />
+                    <NavBar status={status} />
                     <AppName />
                     <SearchBox />
                 </div>
