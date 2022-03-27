@@ -1,8 +1,10 @@
 .oval-wrap{
     filter: drop-shadow(-1px 6px 30px rgba(50, 50, 0, 0.5));
+    overflow: visible;
 }
 
 .oval {
+    position: relative;
     box-shadow: 0 0 100px 50px black inset;
     background-image: url("E:/MERN/VCode/my_food_flipr/src/assets/userHome1.jpg");
     height: 60vh;
@@ -10,7 +12,11 @@
     background-size: cover;
     filter: brightness(100%);
     clip-path: ellipse(70% 95% at 50% 5%);
+}
 
+.over-oval{
+    top: 0;
+    position: absolute;
 }
 
 .sectoru2, .sectoru3, .sectoru4 {

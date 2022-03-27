@@ -12,12 +12,14 @@ const UserHomePage=(props)=>{
     return(
         <div className="userhome">
             <div className="oval-wrap">
-                <div className="oval">
+                <div className="oval"></div>
+                <div className="over-oval">
                     <NavBar status={status} uname={uname}/>
                     <AppName />
                     <SearchBox />
                 </div>
             </div>
+            
             <div className="sectoru2">
                 <div className="headTitle">Collections</div>
                 <div className="headSubTitle"><p>Find the best which suits you</p></div>

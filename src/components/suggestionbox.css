@@ -1,0 +1,18 @@
+.SuggestionBox{
+    background-color: rgba(255, 255, 255, 0.274);
+    padding: 5px 25px;
+    width: 50vw;
+    height: 30vh;
+    backdrop-filter: blur(50px);
+    border-radius: 20px;
+    overflow: scroll;
+}
+.SuggestionBox::-webkit-scrollbar {
+    width: 8px;
+    background: transparent
+}
+  
+.SuggestionBox::-webkit-scrollbar-thumb {
+background: rgb(107, 107, 107);
+border-radius: 10px;
+}

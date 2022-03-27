@@ -1,0 +1,29 @@
+.suggestion-div{
+    margin-top: 10px;
+    padding: 0 30px;
+    height: 85px;
+    width: 45vw;
+    border-radius: 10px;
+    background-color: rgb(240, 240, 240);
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.img-block, .content-block{
+    height: 80px;
+    width: 80px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+#sugg-img{
+    height: 100%;
+}
+
+.content-block {
+    font-family: "Quicksand";
+    font-weight: 600;
+    font-size: large;
+    padding:  5px 20px;
+}

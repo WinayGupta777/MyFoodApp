@@ -2,6 +2,7 @@ import { Search, VisibilityOff } from "@mui/icons-material";
 import { IconButton, OutlinedInput, InputAdornment, TextField} from "@mui/material";
 import { useState } from "react";
 import "./searchbox.css"
+import SuggestionBox from "./SuggestionBox";
 
 const SearchBox=()=>{
     const [value, setValue] = useState(''); 
@@ -40,6 +41,7 @@ const SearchBox=()=>{
                         ),
                       }}
                 />
+                <SuggestionBox />
      
                 {/* {filteredData.length != 0 ?
                     <div className='suggestionBox'>
