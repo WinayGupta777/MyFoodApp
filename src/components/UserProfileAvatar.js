@@ -1,18 +1,21 @@
 import { Avatar, IconButton, Menu,MenuItem } from "@mui/material";
 import { ArrowDropDown } from "@mui/icons-material";
 import { useState } from "react";
-
+import { useNavigate } from "react-router-dom";
 const UserProfileAvatar=(props)=>{
     const [anchorEl, setAnchorEl] = useState(null);
     const open = Boolean(anchorEl);
-
+    const navigate=useNavigate();
 
     const handleClick = (event) => {
         setAnchorEl(event.currentTarget);
       };
       const handleClose = () => {
         setAnchorEl(null);
+        navigate("/");
       };
+      const handleJustClose = () => {setAnchorEl(null);};
+
 
     return(
         <div id="profile">
@@ -24,10 +27,10 @@ const UserProfileAvatar=(props)=>{
                         <Menu
                             anchorEl={anchorEl}
                             open={open}
-                            onClose={handleClose}            
+                            onClose={handleJustClose}            
                         >
-                            <MenuItem onClick={handleClose}>Profile</MenuItem>
-                            <MenuItem onClick={handleClose}>My account</MenuItem>
+                            <MenuItem >Profile</MenuItem>
+                            <MenuItem >My account</MenuItem>
                             <MenuItem onClick={handleClose}>Logout</MenuItem>
                         </Menu>
                     </div>

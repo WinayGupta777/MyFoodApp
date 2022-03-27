@@ -63,10 +63,6 @@ const LoginPage=(props)=>{
     const handleFailure=(result)=>{
         alert(result);
     }
-    const handleLogOut=()=>{
-        localStorage.removeItem('loginData');
-        setLoginData(null);
-    }
 
     return(
         <div className="loginpage">
