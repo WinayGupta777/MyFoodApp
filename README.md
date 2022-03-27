@@ -1,70 +1,51 @@
-# Getting Started with Create React App
+# Getting Started with Food Delivery WebApp
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## HomePage
+[![Home-Screen.jpg](https://i.postimg.cc/Px249fjJ/Home-Screen.jpg)](https://postimg.cc/dkZrTYDc)
 
-## Available Scripts
+## SignupPage
+[![User-Sign-Up-Page.jpg](https://i.postimg.cc/KvBCRLry/User-Sign-Up-Page.jpg)](https://postimg.cc/CzMc2RQv)
 
-In the project directory, you can run:
+## LoginPage
+[![User-Login-Page.jpg](https://i.postimg.cc/KvPsZbxG/User-Login-Page.jpg)](https://postimg.cc/LnsVTrJw)
+
+## UserHomePage
+[![User-Home-Screen.jpg](https://i.postimg.cc/DfCt9nvt/User-Home-Screen.jpg)](https://postimg.cc/grZSR96D)
+
+## LiveSearch
+[![Live-Search.gif](https://i.postimg.cc/Dy6djw7X/Live-Search.gif)](https://postimg.cc/w7tm3Hyq)
+
+## Restaurant Collection
+[![Collection.gif](https://i.postimg.cc/7LHvv6zr/Collection.gif)](https://postimg.cc/nXPSBnT3)
+
+## Thali Types
+[![Thali-Collection.gif](https://i.postimg.cc/HsPDGH2r/Thali-Collection.gif)](https://postimg.cc/6yR1RkFK)
+
+
+## WebApp Code Features
+
+ + Standard Code Structure
+ + No unwanted code
+ + Reusable components
+ + State management
+ + Standard variable names
+ + Git commits with proper msgs
+
+## Include this Node Libraries before running the Website
+
+### `npm i react react-dom` 
+### `npm i react-google-login`
+### `npm i react-router react-router-dom axios dotenv`
+### `npm i @mui/material @mui/icons-material`
+### `npm i @emotion/styled @emotion/react`
+
+
+## In the project directory, you can run:
 
 ### `npm start`
+
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+ - Reference website: https://www.zomato.com/
