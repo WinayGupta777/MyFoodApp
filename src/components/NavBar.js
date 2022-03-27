@@ -3,9 +3,12 @@ import { useNavigate } from "react-router-dom";
 import UserProfileAvatar from "./UserProfileAvatar";
 import { useState } from "react";
 
-const NavBar=()=>{
-    const [status, setStatus] = useState(true);
+const NavBar=(props)=>{
+    const [status, setStatus] = useState(props.status);
     const navigate = useNavigate();
+
+    //setStatus(props.status);
+
     const navigateTo=(place)=>{
         if (place == "rest") navigate("/resota")
         else if (place == "regis") navigate("/register")

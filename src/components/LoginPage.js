@@ -8,11 +8,10 @@ import axios from "axios";
 import MsgBox from "./MsgBox";
 
 
-const LoginPage=()=>{
+const LoginPage=(props)=>{
     const [userEmail, setEmail] = useState('');
     const [userPasswd, setPasswd] = useState('');
     const [msg, setMsg] = useState(null);
-    const [status, setStatus] = useState(false);
     const navigate = useNavigate();
 
     const onChangeHandler=(lbl, e)=>{
@@ -28,7 +27,7 @@ const LoginPage=()=>{
                 email:userEmail,
                 password:userPasswd
         }).then((r)=>{
-                setStatus(r.data.status);
+                props.func(r.data.status);
                 setMsg(r.data.message);
                 console.log(r.data);
         })

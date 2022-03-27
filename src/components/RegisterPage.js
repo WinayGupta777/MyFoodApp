@@ -6,13 +6,12 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import MsgBox from "./MsgBox";
 
-const RegisterPage=()=>{
+const RegisterPage=(props)=>{
     const [userName, setUserName] = useState('');
     const [userEmail, setEmail] = useState('');
     const [userPasswd, setPasswd] = useState('');
     const [userCPasswd, setCPasswd] = useState('');
     const [msg, setMsg] = useState(null);
-    const [status, setStatus] = useState(false);
     const navigate = useNavigate();
 
     const onChangeHandler=(lbl, e)=>{
@@ -33,7 +32,7 @@ const RegisterPage=()=>{
                 email:userEmail,
                 password:userPasswd
             }).then((r)=>{
-                setStatus(r.data.status);
+                props.func(r.data.status);
                 setMsg(r.data.message);
                 console.log(r.data);
             })
