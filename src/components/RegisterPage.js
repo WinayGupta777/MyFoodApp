@@ -46,6 +46,12 @@ const RegisterPage=(props)=>{
         }
     }
 
+    const navigateAfterSignUp=()=>{
+        setTimeout(() => {
+            navigate("/userhome");
+        }, 2000);
+    }
+
     const putMsg=()=>{
         setTimeout(() => {
             setMsg(null)
@@ -128,7 +134,7 @@ const RegisterPage=(props)=>{
                                 </p>
                             </div>
                             {msg ? putMsg() : null}
-
+                            {props.status ? navigateAfterSignUp() : null}
                         </div>
                     </div>
                 </div>
