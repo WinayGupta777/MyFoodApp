@@ -5,6 +5,7 @@ import GoogleButton from "react-google-button";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import MsgBox from "./MsgBox";
 
 
 const LoginPage=()=>{
@@ -34,8 +35,14 @@ const LoginPage=()=>{
         .catch((e)=>{
             console.log(e.message)
             setMsg(e.message);
-            //putError();
+            putMsg();
         });
+    }
+    const putMsg=()=>{
+        setTimeout(() => {
+            setMsg(null)
+        }, 4000);
+        return(<MsgBox msg={msg} />);
     }
 
     const navigateToRegister=()=>{
@@ -99,6 +106,9 @@ const LoginPage=()=>{
                                     <a  onClick={()=>navigateToRegister()} id="fplink">Register</a>
                                 </p>
                             </div>
+                            
+                            {msg ? putMsg() : null}
+
                         </div>
                     </div>
                 </div>
