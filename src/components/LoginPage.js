@@ -1,17 +1,17 @@
 import "./loginpage.css"
 import CloseIcon from '@mui/icons-material/Close';
 import { Button, IconButton, TextField } from "@mui/material";
-import GoogleButton from "react-google-button";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import MsgBox from "./MsgBox";
-
-
+import GoogleLogin from "react-google-login";
+import clientId from "../clientId.json";
 const LoginPage=(props)=>{
     const [userEmail, setEmail] = useState('');
     const [userPasswd, setPasswd] = useState('');
     const [msg, setMsg] = useState(null);
+    const [loginData, setLoginData] = useState();
     const navigate = useNavigate();
 
     const onChangeHandler=(lbl, e)=>{
@@ -52,6 +52,20 @@ const LoginPage=(props)=>{
 
     const navigateToRegister=()=>{
         navigate("/register");
+    }
+
+    const handleLogin =(googleData)=>{
+        setLoginData(googleData);
+        setMsg("You are logged in successfully")
+        // console.log(googleData.Du.VX);
+        props.func(true, googleData.Du.VX)
+    }
+    const handleFailure=(result)=>{
+        alert(result);
+    }
+    const handleLogOut=()=>{
+        localStorage.removeItem('loginData');
+        setLoginData(null);
     }
 
     return(
@@ -106,7 +120,16 @@ const LoginPage=(props)=>{
                             <div><h3 id="linebw">or</h3></div>
 
                             <div className="Googlebtn">
-                                <GoogleButton />
+                                {
+                                    loginData ? navigateAfterLogin() : (   
+                                    <GoogleLogin
+                                        clientId={clientId.REACT_GOOGLE_LOGIN_CLIENT_ID}
+                                        onSuccess={handleLogin}
+                                        onFailure={handleFailure}
+                                        cookiePolicy={'single_host_origin'}                              
+                                    ></GoogleLogin>
+                                )
+                                }
                                 <p>Don't have an account? 
                                     <a  onClick={()=>navigateToRegister()} id="fplink">Register</a>
                                 </p>
