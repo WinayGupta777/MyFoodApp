@@ -11,7 +11,7 @@ const NavBar=(props)=>{
     // setStatus(props.status);
 
     const navigateTo=(place)=>{
-        if (place == "rest") navigate("/resota")
+        if (place == "rest") navigate("/addrestaurant")
         else if (place == "regis") navigate("/register")
         else if (place == "sign") navigate("/login")
     }

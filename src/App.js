@@ -5,6 +5,7 @@ import RegisterPage from './components/RegisterPage';
 import HomePage from './components/HomePage';
 import UserHomePage from './components/UserHomePage';
 import { useState } from 'react';
+import AddRestaurantPage from './components/AddRestaurantPage';
 
 function App() {
   const [status, setStatus] = useState(false);
@@ -24,6 +25,7 @@ function App() {
           <Route path="/userhome" element={<UserHomePage status={status} uname={GlobalUserName}/>} />
           <Route path="/register" element={<RegisterPage func={changeStatus} status={status} />} />
           <Route path="/login" element={<LoginPage func={changeStatus} status={status}/>} />
+          <Route path="/addrestaurant" element={<AddRestaurantPage /> } />
         </Routes>
       </Router>
     </div>
