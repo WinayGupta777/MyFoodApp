@@ -1,24 +1,33 @@
-import { Search, VisibilityOff } from "@mui/icons-material";
+import { CallMerge, Search, VisibilityOff } from "@mui/icons-material";
 import { IconButton, OutlinedInput, InputAdornment, TextField} from "@mui/material";
 import { useState } from "react";
 import "./searchbox.css"
 import SuggestionBox from "./SuggestionBox";
+import AllThalis from "./SuggestionList.json"
+
+
 
 const SearchBox=()=>{
     const [value, setValue] = useState(''); 
-    const onChangeMethod=(e)=>{
+    const [suggs,setSugg] = useState([]);
+
+     const onChangeMethod=(e)=>{
         // props.func(e.target.value);
         setValue(e.target.value);
-        // var searchWord = e.target.value.toLowerCase();
-        // var displayCmd = AllCmds.filter(
-        //     (i)=>{
-        //         return i.cmd.indexOf(searchWord) !== -1;
-        //     }
-        //);
-        // if(searchWord){setData(displayCmd);}
-        // else {setData([]);}
+        var searchWord = e.target.value.toLowerCase();
+        var displayCmd = AllThalis.filter(
+                (i)=>{ 
+                    return i;
+                }
+            );
+        if(searchWord){
+            setSugg(displayCmd);
+        }
+        else {
+            setSugg([]);
+        }
         //setData(displayCmd);
-    }
+     }
     return(
         <div>
             <div className="cmdsugg">
@@ -28,6 +37,7 @@ const SearchBox=()=>{
                     type="text"
                     id="in"
                     autoFocus
+                    autoComplete="off"
                     onChange={(e)=>onChangeMethod(e)}
                     sx={{
                         backgroundColor: 'white',
@@ -41,16 +51,10 @@ const SearchBox=()=>{
                         ),
                       }}
                 />
-                <SuggestionBox />
      
-                {/* {filteredData.length != 0 ?
-                    <div className='suggestionBox'>
-                        {filteredData.map(
-                            (value,key)=>{
-                            return <div className='suggetion' onClick={()=>onSuggClick(value.cmd)}>{value.cmd}</div>
-                        })}
-                    </div> : null
-                } */}
+                {suggs.length != 0 ?
+                    <SuggestionBox suggestions={suggs} />: null
+                }
             </div>
         </div>
     );

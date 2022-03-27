@@ -1,12 +1,16 @@
+import { useState } from "react";
 import "./suggestionbox.css";
 import SuggestionItem from "./SuggestionItem";
 
-const SuggestionBox=()=>{
+const SuggestionBox=(props)=>{
+    // console.log(props.suggestions);
     return(
         <div className="SuggestionBox">
-            <SuggestionItem />
-            <SuggestionItem />
-            <SuggestionItem />
+            {
+                props.suggestions.map(
+                    (i)=><SuggestionItem img={i.samosa.img} name={i.samosa.restname} />
+                )
+            }
         </div>
     );
 }
