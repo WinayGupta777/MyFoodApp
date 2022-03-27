@@ -3,13 +3,16 @@ import CloseIcon from '@mui/icons-material/Close';
 import { Button,IconButton, TextField, Checkbox, FormControlLabel } from "@mui/material";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-
+import axios from "axios";
+import MsgBox from "./MsgBox";
 
 const RegisterPage=()=>{
     const [userName, setUserName] = useState('');
     const [userEmail, setEmail] = useState('');
     const [userPasswd, setPasswd] = useState('');
     const [userCPasswd, setCPasswd] = useState('');
+    const [msg, setMsg] = useState(null);
+    const [status, setStatus] = useState(false);
     const navigate = useNavigate();
 
     const onChangeHandler=(lbl, e)=>{
@@ -20,11 +23,35 @@ const RegisterPage=()=>{
     }
     // console.log(userName + userEmail + userPasswd + userCPasswd);
 
-    const onSubmited=()=>{
+    const onSubmited=(e)=>{
+        e.preventDefault();
         console.log(userCPasswd + userPasswd);
         if (userCPasswd == userPasswd){
             console.log("Password are matching");
+            axios.post("http://localhost:8080/signup",{
+                username:userName,
+                email:userEmail,
+                password:userPasswd
+            }).then((r)=>{
+                setStatus(r.data.status);
+                setMsg(r.data.message);
+                console.log(r.data);
+            })
+            .catch((e)=>{
+                console.log(e);
+                setMsg(e.message);
+                putMsg();
+            });
+        }else{
+            setMsg("Password are not matching");
         }
+    }
+
+    const putMsg=()=>{
+        setTimeout(() => {
+            setMsg(null)
+        }, 4000);
+        return(<MsgBox msg={msg} />);
     }
 
     const navigateToLogin=()=>{
@@ -101,6 +128,7 @@ const RegisterPage=()=>{
                                     <a  onClick={()=>navigateToLogin()} id="fplink">Sign in</a>
                                 </p>
                             </div>
+                            {msg ? putMsg() : null}
 
                         </div>
                     </div>
