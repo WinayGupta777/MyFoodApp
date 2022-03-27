@@ -1,5 +1,4 @@
 import "./card1.css"
-import img1 from "../assets/onSignin.jpg";
 
 const Card1=(props)=>{
     return(

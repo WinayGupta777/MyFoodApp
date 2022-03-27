@@ -1,11 +1,12 @@
 import "./homepagetitle.css";
 import DeliveryDiningIcon from '@mui/icons-material/DeliveryDining';
 import { Button } from "@mui/material";
-
+import { useNavigate } from "react-router-dom";
 const TitleTag=()=>{
-
+    const navigate = useNavigate();
     const onOrderPressed=()=>{
         console.log("Order pressed");
+        navigate("/login");
     }
     return(
         <div className="tcontainer">
